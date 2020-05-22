@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.profach.viewmodels.result.YovayshiResultViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/art_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/yovayshi_art"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+            app:answerValue="@{viewModel.art}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tech_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/yovayshi_tech"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+            app:answerValue="@{viewModel.tech}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/art_result" />
+
+        <TextView
+            android:id="@+id/people_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/yovayshi_people"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+            app:answerValue="@{viewModel.people}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tech_result" />
+
+        <TextView
+            android:id="@+id/mental_work_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/yovayshi_mental_work"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+            app:answerValue="@{viewModel.mentalWork}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/people_result" />
+
+        <TextView
+            android:id="@+id/physical_work_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/yovayshi_physical_work"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+            app:answerValue="@{viewModel.physicalWork}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mental_work_result" />
+
+        <TextView
+            android:id="@+id/material"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/yovayshi_material"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+            app:answerValue="@{viewModel.material}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/physical_work_result" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

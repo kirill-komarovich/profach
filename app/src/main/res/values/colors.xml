@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple200">#BB86FC</color>
+    <color name="purple500">#6200EE</color>
+    <color name="purple700">#3700B3</color>
+    <color name="teal200">#03DAC5</color>
+    <color name="cyan200">#80deea</color>
+    <color name="cyan500">#00bcd4</color>
+    <color name="cyan700">#0097a7</color>
+    <color name="red500">#f44336</color>
+    <color name="yellow700">#fbc02d</color>
+    <color name="grey800">#424242</color>
+</resources>

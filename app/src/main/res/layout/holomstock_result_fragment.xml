@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.profach.viewmodels.result.HolomstockResultViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/result_details"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/holomstock_result_details"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/biology_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/holomstock_biology"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+                app:answerValue="@{viewModel.biology}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/result_details" />
+
+            <TextView
+                android:id="@+id/geography_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/holomstock_geography"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+                app:answerValue="@{viewModel.geography}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/biology_result" />
+
+            <TextView
+                android:id="@+id/geology_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/holomstock_geology"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+                app:answerValue="@{viewModel.geology}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/geography_result" />
+
+            <TextView
+                android:id="@+id/medicine_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/holomstock_medicine"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+                app:answerValue="@{viewModel.medicine}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/geology_result" />
+
+            <TextView
+                android:id="@+id/light_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/holomstock_light"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+                app:answerValue="@{viewModel.light}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/medicine_result" />
+
+            <TextView
+                android:id="@+id/physics_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/holomstock_physics"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+                app:answerValue="@{viewModel.physics}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/light_result" />
+
+            <TextView
+                android:id="@+id/chemistry_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/holomstock_chemistry"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+                app:answerValue="@{viewModel.chemistry}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/physics_result" />
+
+            <TextView
+                android:id="@+id/technique_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/holomstock_technique"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+                app:answerValue="@{viewModel.technique}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/chemistry_result" />
+
+            <TextView
+                android:id="@+id/engineering_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/holomstock_engineering"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+                app:answerValue="@{viewModel.engineering}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/technique_result" />
+
+            <TextView
+                android:id="@+id/metalworking_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/holomstock_metalworking"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+                app:answerValue="@{viewModel.metalworking}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/engineering_result" />
+
+            <TextView
+                android:id="@+id/woodworking_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/holomstock_woodworking"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+                app:answerValue="@{viewModel.woodworking}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/metalworking_result" />
+
+            <TextView
+                android:id="@+id/construction_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/holomstock_construction"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+                app:answerValue="@{viewModel.construction}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/woodworking_result" />
+
+            <TextView
+                android:id="@+id/transport_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/holomstock_transport"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+                app:answerValue="@{viewModel.transport}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/construction_result" />
+
+            <TextView
+                android:id="@+id/aviation_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/holomstock_aviation"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+                app:answerValue="@{viewModel.aviation}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/transport_result" />
+
+            <TextView
+                android:id="@+id/military_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/holomstock_military"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+                app:answerValue="@{viewModel.military}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/aviation_result" />
+
+            <TextView
+                android:id="@+id/history_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/holomstock_history"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+                app:answerValue="@{viewModel.history}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/military_result" />
+
+            <TextView
+                android:id="@+id/literature_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/holomstock_literature"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+                app:answerValue="@{viewModel.literature}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/history_result" />
+
+            <TextView
+                android:id="@+id/journalism_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/holomstock_journalism"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+                app:answerValue="@{viewModel.journalism}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/literature_result" />
+
+            <TextView
+                android:id="@+id/social_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/holomstock_social"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+                app:answerValue="@{viewModel.social}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/journalism_result" />
+
+            <TextView
+                android:id="@+id/pedagogy_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/holomstock_pedagogy"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+                app:answerValue="@{viewModel.pedagogy}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/social_result" />
+
+            <TextView
+                android:id="@+id/jurisprudence_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/holomstock_jurisprudence"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+                app:answerValue="@{viewModel.jurisprudence}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/pedagogy_result" />
+
+            <TextView
+                android:id="@+id/service_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/holomstock_service"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+                app:answerValue="@{viewModel.service}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/jurisprudence_result" />
+
+            <TextView
+                android:id="@+id/math_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/holomstock_math"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+                app:answerValue="@{viewModel.math}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/service_result" />
+
+            <TextView
+                android:id="@+id/economics_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/holomstock_economics"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+                app:answerValue="@{viewModel.economics}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/math_result" />
+
+            <TextView
+                android:id="@+id/languages_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/holomstock_languages"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+                app:answerValue="@{viewModel.languages}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/economics_result" />
+
+            <TextView
+                android:id="@+id/art_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/holomstock_art"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+                app:answerValue="@{viewModel.art}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/languages_result" />
+
+            <TextView
+                android:id="@+id/acting_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/holomstock_acting"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+                app:answerValue="@{viewModel.acting}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/art_result" />
+
+            <TextView
+                android:id="@+id/music_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/holomstock_music"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+                app:answerValue="@{viewModel.music}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/acting_result" />
+
+            <TextView
+                android:id="@+id/sport_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/holomstock_sport"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+                app:answerValue="@{viewModel.sport}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/music_result" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

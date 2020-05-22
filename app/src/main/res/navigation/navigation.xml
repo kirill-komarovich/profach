@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/navigation"
+    app:startDestination="@id/inquirers">
+    <fragment
+        android:id="@+id/inquirers"
+        android:name="com.profach.fragments.InquirersFragment"
+        android:label="@string/inquirers_fragment_label">
+        <action
+            android:id="@+id/action_inquirers_to_walkthrough"
+            app:destination="@id/walkthrough" />
+    </fragment>
+    <fragment
+        android:id="@+id/walkthrough"
+        android:name="com.profach.fragments.WalkthroughFragment"
+        android:label="@string/walkthrough_fragment_label">
+        <argument
+            android:name="inquirerType"
+            app:argType="com.profach.entities.Inquirer$Type" />
+        <action
+            android:id="@+id/action_walkthrough_to_result"
+            app:destination="@id/result"
+            app:popUpTo="@id/walkthrough"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/result"
+        android:name="com.profach.fragments.ResultFragment"
+        android:label="@string/result_fragment_label">
+        <argument
+            android:name="inquirerType"
+            app:argType="com.profach.entities.Inquirer$Type" />
+        <argument
+            android:name="answers"
+            app:argType="integer[]" />
+    </fragment>
+    <fragment
+        android:id="@+id/account"
+        android:name="com.profach.fragments.AccountFragment"
+        android:label="@string/account_fragment_label" >
+        <action
+            android:id="@+id/action_account_to_history"
+            app:destination="@id/history" />
+        <action
+            android:id="@+id/action_account_to_students"
+            app:destination="@id/students" />
+        <action
+            android:id="@+id/action_account_to_upgradeAccount"
+            app:destination="@id/upgradeAccount" />
+    </fragment>
+    <fragment
+        android:id="@+id/history"
+        android:name="com.profach.fragments.HistoryFragment"
+        android:label="@string/history_fragment_label" >
+        <argument
+            android:name="userId"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <action
+            android:id="@+id/action_history_to_result"
+            app:destination="@id/result" />
+    </fragment>
+    <fragment
+        android:id="@+id/students"
+        android:name="com.profach.fragments.StudentsFragment"
+        android:label="@string/students_fragment_label" >
+        <action
+            android:id="@+id/action_students_to_history"
+            app:destination="@id/history" />
+    </fragment>
+    <fragment
+        android:id="@+id/upgradeAccount"
+        android:name="com.profach.fragments.UpgradeAccountFragment"
+        android:label="@string/upgrade_account_fragment_label" />
+</navigation>
